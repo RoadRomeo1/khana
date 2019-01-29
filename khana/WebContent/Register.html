@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Khana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images\khana.png" type="image/x-icon"/>
+<link rel="stylesheet" href="css\style3.css" />
+<link rel="stylesheet" href="css\theme.css">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+
+.a{
+  font-size: 1.50em;
+  font-weight: 300;
+  margin-top: 18px;
+  padding: 10px 8px;
+  width:400px;
+  height:40px;
+}
+
+.c{
+  font-size: 1.50em;
+  font-weight: 300;
+  margin-top: 18px;
+  padding: 10px 8px;
+  width:400px;
+  height:40px;
+  position: center;
+}
+
+
+
+.button2{
+background-color: gray;
+border-radius: 5px;
+border-color:black;
+background-color: #333;
+font-size: 25px;
+cursor: pointer;
+height:50px;
+width:190px;
+font-style: color=white;
+position: center;
+}
+
+.button2:hover {
+	background-color: #cc580c;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+
+	<div class="banner row" id="banner">		
+			<div class="parallax text-center" style="background-image: url(http://wowthemes.net/demo/leroy/img/dummy1.jpg);">
+				<div class="parallax-pattern-overlay">
+					<div class="container text-center" style="height:600px;padding-top:170px;">
+					<h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">Khana</h2>
+					</div>
+				</div>
+			</div>
+		</div>	
+	
+	<div class="menu">
+			<div class="navbar-wrapper">
+				<div class="container">
+					<div class="navwrapper">
+						<div class="navbar navbar-inverse navbar-static-top">
+							<div class="container">
+								<div class="navArea">
+									<div class="navbar-collapse collapse">
+										<ul class="nav navbar-nav">
+											<li class="menuItem active"><a href="welcome.html">Home</a></li>
+											<li class="menuItem"><a href="welcome.html">Themes</a></li>
+											<li class="menuItem"><a href="welcome.html">Food Gallery</a></li>
+											<li class="menuItem"><a href="welcome.html">Portfolio</a></li>
+											<li class="menuItem"><a href="welcome.html">Sign in</a></li>
+	                                        <li class="menuItem"><a href="welcome.html">About Us</a></li>
+					                        <li class="menuItem"><a href="welcome.html">Contact Us</a></li>
+	                                  </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		</header>
+
+
+	
+
+
+
+	<section class="contact" id="login">
+	<div class="container">
+		<div class="heading">
+				<img class="dividerline" src="img/sep.png" alt="">
+				<h2>Register</h2>
+				<img class="dividerline" src="img/sep.png" alt="">
+				<h3>You can Register here for free and be an member of khana<br>
+				  you can access many of it's Awesome features.	</h3>
+		</div>
+	</div>
+	 <div class="container w960">
+      <div class="row">
+		<div class="done">
+		</div>
+       <form method="post" action="Register">
+       <center>   <input name="name" type="text" class="a" required="required" placeholder="Username *"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
+        <br><br>
+		<input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 />
+          <br><br>
+          <input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+          <br><br>
+          <input type="submit" class="button2" value="Register"></center>
+        </form>
+      </div>
+    </div>
+	</section>
+
+	
+
+	
+	<!--footer-->
+	<section class="footer" id="footer">
+	<p class="text-center">
+	 &copy; Copyright <br>
+	 Developed by Himanshu Vyas
+	</p>
+    </section>
+	</div><!--wrapper end-->
+	
+	
+<!--Javascripts-->
+<script src="js/jquery.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/menustick.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/easing.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/masonry.js"></script>
+<script src="js/imgloaded.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/colorfinder.js"></script>
+<script src="js/gridscroll.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+	$('.navbar-wrapper').stickUp({
+		parts: {
+		  0: 'banner',
+		  1: 'aboutus',
+		  2: 'specialties',
+		  3: 'gallery',
+		  4: 'feedback',
+		  5: 'contact'
+		},
+		itemClass: 'menuItem',
+		itemHover: 'active',
+		topMargin: 'auto'
+		});
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+body{
+
+    background-image: url("images/back2.jpg");
+
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+input[type=text] {
+background: transparent;
+border-radius: 5px;
+height: 50px;
+width: 400px;
+font-size: 20px;
+}
+
+
+input[type=password] {
+background: transparent;
+border-radius: 5px;
+height: 50px;
+width: 400px;
+font-size: 20px;
+}
+
+
+
+input[type=email] {
+background: transparent;
+border-radius: 5px;
+height: 50px;
+width: 400px;
+font-size: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 10%; 
+}
+
+input[type=submit]{
+ background-color: #6DDB07; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <link  rel="icon" href="images/login.png" type="image/x-icon"/>
+  <link  rel="stylesheet" href="css/style3.css">
+  <link  rel="stylesheet" href="css/style1.css">
+  
+  <title>Login</title>
+<style type="text/css">
+
+body {
+	background-image:url("images/back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+</style>
+  
+
+</head>
+
+<body>
+
+
+<!-- under overlay stuff -->
+<!-- the panel -->
+ <header>
+<nav id='cssmenu'>
+<div class="logo"><a href="#">KHANA</a></div>
+<div id="head-mobile"></div>
+<div class="button"></div>
+<ul>
+<li><a href='welcome.html'>HOME</a></li>
+<li><a href='#' onclick="alert('Please Login first');location='Login.html';">EXPLORE</a></li>
+<li><a href='#' onclick="alert('Please Login first');location='Login.html';">CONTRIBUTE</a></li>
+<li><a href="Register.html">NEW TO KHANA</a>
+<li><a href="About.html">ABOUT US</a>
+<li><a href="#">CONTACT US</a>
+
+</ul>
+</nav>
+</header>
+
+   
+  <div class="ui-panel login-panel animated bounceInDown" id="login">
+    <form action="Logged" method="post">
+    
+    <div class="login-form">
+      <div class="subtitle">Login</div>
+      <input type="text" placeholder="Username" name="user" required />
+      <input type="password" placeholder="Password" name="pass" required maxlength="20"/>
+    </div>
+    
+    <footer>
+      
+      <div class="right form-actions">
+		<a href="#" class="ui-button inactive register"><input type="submit" value="Login" class="button2"></a>
+		<a href="#" class="ui-button inactive register">Forgot Password</a>
+		</form>
+      </div>
+    </footer>
+
+
+
+</body>
+
+</html>
+
+

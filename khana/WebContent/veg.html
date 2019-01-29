@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Veg Dishes</title>
+<link rel="stylesheet" href="css/style3.css"> 
+<link rel="stylesheet" href="css/style5.css"> 
+<link rel="icon" href="images/veg1.png" type="image/x-icon"/>
+
+
+<style type="text/css">
+.button2 {
+    background-color: transparent;
+    border-color:gray;
+    border-radius:5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 50%;
+}
+.button2:hover{
+background-color: green;
+
+}	
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background-image:url("images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery {
+  width: 640px;
+  margin: 0 auto;
+  padding: 5px;
+  background: transparent;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 200px;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<nav id='cssmenu'>
+<div class="logo"><a href="#">KHANA</a></div>
+<div id="head-mobile"></div>
+<div class="button"></div>
+<ul>
+<li ><a href='profileSer'>Dashboard</a></li>
+<li class='active'><a href='Dishes.html'>EXPLORE</a></li>
+<li><a href='#'>CONTRIBUTE</a></li>
+<li><a href='search.html'>SEARCH</a></li>
+<li><a href='#'>MORE</a>
+   <ul>
+      <li><a href='#'>CONTACT US</a> </li>
+      <li><a href='#'>EDIT PROFILE</a>
+         <ul>
+            <li><a href='change.html'>CHANGE PASSWORD</a></li>
+            <li><a href='changeE.html'>CHANGE EMAIL</a></li>
+         </ul>
+      </li>
+	  <li><a href="logoutSer">SIGN OUT</a></li>
+   </ul>
+</li>
+
+</ul>
+</nav>
+</header>
+
+
+<script src="F:\khana\WebContent\js\menubar.js"></script>
+
+<div class="gallery cf">
+  <div>
+    <img src="https://www.thespruceeats.com/thmb/yi5M46Z6MzeAV_CXPg-v0Wuw8wM=/1414x942/filters:no_upscale():max_bytes(150000):strip_icc()/Mutter-Paneer-GettyImages-670907161-58d00a633df78c3c4f3b9bb2.jpg"/>
+  </div>
+  <h2><u><center>Matar Paneer</u></h2>
+  </div>
+
+<div class="gallery cf">
+  <div>
+    <img src="https://cdn2.stylecraze.com/wp-content/uploads/2014/09/Indian-Vegetarian-Dinner-Recipes-4.jpg"/> 
+  </div>
+    <h2><u><center>Masala Bhindi</u></h2>
+  </div>
+  
+<div class="gallery cf">
+  <div>
+    <img src="https://www.thespruceeats.com/thmb/rMdKuQwgBzDiy-WnxZirLGs31Sw=/1720x1146/filters:no_upscale():max_bytes(150000):strip_icc()/Malai-Kofta-GettyImages-640045270-58d0064d5f9b581d72be95b6.jpg"/>
+  </div>
+  <h2><u><center>Sunday Special</u></h2>
+  </div>
+	
+<div class="gallery cf">
+  <div>
+    <img src="https://www.watscooking.com/images/dish/normal/503.jpg"/>
+  </div>
+  <h2><u><center>Veg Thali</u></h2>
+  </div>
+   
+<div class="gallery cf">
+  <div>
+    <img src="https://cdn.lifehack.org/wp-content/uploads/2015/02/20150206_122605.jpg"/>
+  </div>
+  <h2><u><center>Jain Thali</u></h2>
+  </div>
+  <center><button class="button2">More</button><br>
+</center>
+  
+</body>
+</html>
