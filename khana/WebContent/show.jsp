@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@page import=" java.sql.*" %>
+
+
 <html>
 <head>
-<title>Khana</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images\khana.png" type="image/x-icon"/>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="icon" href="images\data.png" type="image/x-icon"/>
 <link rel="stylesheet" href="css\style3.css" />
 <link rel="stylesheet" href="css\theme.css">
-
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-
-<style type="text/css">
-
-.a{
-  font-size: 1.50em;
-  font-weight: 300;
-  margin-top: 18px;
-  padding: 10px 8px;
-  width:400px;
-  height:40px;
+<title>Data</title>
+<style>
+table {
+	border: 1px solid black;
+	outline-color: black;
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	
 }
 
-.c{
-  font-size: 1.50em;
-  font-weight: 300;
-  margin-top: 18px;
-  padding: 10px 8px;
-  width:400px;
-  height:40px;
-  position: center;
+table td {
+	width: 50%;
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
 }
 
+table caption {
+	font-style: italic;
+}
 
 
 .button2{
@@ -44,7 +48,7 @@ cursor: pointer;
 height:50px;
 width:190px;
 font-style: color=white;
-position: center;
+
 }
 
 .button2:hover {
@@ -53,10 +57,7 @@ position: center;
 
 
 </style>
-
 </head>
-
-
 <body>
 
 <header>
@@ -80,14 +81,10 @@ position: center;
 								<div class="navArea">
 									<div class="navbar-collapse collapse">
 										<ul class="nav navbar-nav">
-											<li class="menuItem active"><a href="welcome.html">Home</a></li>
-											<li class="menuItem"><a href="welcome.html">Themes</a></li>
-											<li class="menuItem"><a href="welcome.html">Food Gallery</a></li>
-											<li class="menuItem"><a href="welcome.html">Portfolio</a></li>
-											<li class="menuItem"><a href="welcome.html">Sign in</a></li>
-	                                        <li class="menuItem"><a href="welcome.html">About Us</a></li>
-					                        <li class="menuItem"><a href="welcome.html">Contact Us</a></li>
-	                                  </ul>
+											<li class="menuItem active"><a href="AdminProfile.html">Home</a></li>
+											<li class="menuItem"><a href="show.jsp">Show members</a></li>
+					                        <li class="menuItem"><a href="logoutSer">Logout</a></li>
+					                    </ul>
 									</div>
 								</div>
 							</div>
@@ -99,49 +96,119 @@ position: center;
 		</header>
 
 
+<%   	Connection con=null;
+	    ResultSet rs=null;
+		Statement st=null;
+		
+	try {
+		
+	 
+	String url="jdbc:mysql://localhost:3306/khanna";
+	String user="root";
+	String pass="root";
+	String sql="select * from data";
+    
+	
+	Class.forName("com.mysql.jdbc.Driver");
+	
+	con=DriverManager.getConnection(url, user, pass);
+	
+	
+	st=con.createStatement();
+	rs=st.executeQuery(sql);
+	%>
+	
+	<center>
+	<br><br>
+	<table border="5px" bordercolor="black">
+	<tr>
+	 <th>
+	 <% out.println("Name"); %>
+	 </th>
+	 <th>
+	 <%out.println("Email"); %>
+	 </th>
+	 <th>
+	 <%out.println("Password"); %>
+	 </th>
+	 <th>
+	 <%out.println("Security Question"); %>
+	 </th>
+	 <th>
+	 <%out.println("Security Answer"); %>
+	 </th>
+	 </tr>
+	 </table>
+	 </center>
+	 <% 
+ while(rs.next()){
+	 
+	 String name=rs.getString("name");
+	 String email=rs.getString("email");
+	 String password=rs.getString("password");
+	 String secQuestion=rs.getString("secQuestion");
+	 String secAnswer=rs.getString("secAnswer");
+	 %>
+	 <center>
+	 <table border="5px" bordercolor="black">
+	 <tr>
+	 <td>
+	 <% out.println(name); %>
+	 </td>
+	 <td>
+	 <%out.println(email); %>
+	 </td>
+	 <td>
+	 <%out.println(password); %>
+	 </td>
+	 <td>
+	 <%out.println(secQuestion); %>
+	 </td>
+	 <td>
+	 <%out.println(secAnswer); %>
+	 </td>
+	 </tr>
+	 </table>
+	 </center>
+<%
+ }
+	%>
+	<% 
+	
+	if(con!=null) {
+		con.close();
+		st.close();
+	}
+
+	}
+	catch(ClassNotFoundException e) {
+		e.printStackTrace();
+	} 
+	
+	
+	catch (SQLException e) {
+		e.printStackTrace();
+	}
+	
+	
+%>
+
+
+<br><br>
+
+<center><input type="button"  class="button2"  value="Remove user" onclick="location='removeUser.jsp';">&nbsp&nbsp&nbsp&nbsp<input type="button" class="button2" value="Add new admin" onclick="location='addAdmin.html';"></center>
 	
 
 
-
-	<section class="contact" id="login">
-	<div class="container">
-		<div class="heading">
-				<img class="dividerline" src="img/sep.png" alt="">
-				<h2>Register</h2>
-				<img class="dividerline" src="img/sep.png" alt="">
-				<h3>You can Register here for free and be an member of khana<br>
-				  you can access many of it's Awesome features.	</h3>
-		</div>
-	</div>
-	 <div class="container w960">
-      <div class="row">
-		<div class="done">
-		</div>
-       <form method="post" action="Register">
-       <center>   <input name="name" type="text" class="a" required="required" placeholder="Username *"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
-        <br><br>
-		<input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 />
-          <br><br>
-          <input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
-          <br><br>
-          <input type="submit" class="button2" value="Register">
-          <input type="button" class="button2" value="Admin Login" onclick="location='AdminLog.html';"></center>
-           </center>
-        </form>
-      </div>
-    </div>
-	</section>
-
-	
-
-	
 	<!--footer-->
+	<div>
 	<section class="footer" id="footer">
+	
 	<p class="text-center">
 	 &copy; Copyright <br>
 	 Developed by Himanshu Vyas
 	</p>
-    </section>
+	</section>
 	</div><!--wrapper end-->
 	
 	
@@ -182,5 +249,7 @@ $(document).ready( function() {
 	});
 });
 </script>
+
 </body>
 </html>
+	 

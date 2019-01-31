@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
@@ -28,8 +29,8 @@ public class contact extends HttpServlet {
     	  String url="jdbc:mysql://localhost:3306/khanna";
     	  String name=request.getParameter("name");
     	  String email=request.getParameter("email");
-    	  String comment=request.getParameter("comment");
-    	  String sql="insert into contact values('"+name+"','"+email+"','"+comment+"')";
+    	  String message=request.getParameter("comment");
+    	  String sql="insert into contact values('"+name+"','"+email+"','"+message+"')";
     	  
     	  Class.forName("com.mysql.jdbc.Driver");	
     	  PrintWriter pw=response.getWriter();
@@ -54,11 +55,12 @@ public class contact extends HttpServlet {
 	 		 con.close();
 	 		 st.close();
       }
-      catch(Exception e) {
-    	  e.printStackTrace();
+      catch (ClassNotFoundException e) {
+  		System.out.println("Error");
+  	} catch (SQLException e) {
+       System.out.println("here");   
       }
- 	
-	
-	}
+      
+      }
 
 }

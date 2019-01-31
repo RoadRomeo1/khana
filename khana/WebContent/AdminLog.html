@@ -103,35 +103,32 @@ position: center;
 
 
 
-	<section class="contact" id="login">
+	<section class="contact">
 	<div class="container">
 		<div class="heading">
 				<img class="dividerline" src="img/sep.png" alt="">
-				<h2>Register</h2>
+				<h2>Admin</h2>
 				<img class="dividerline" src="img/sep.png" alt="">
-				<h3>You can Register here for free and be an member of khana<br>
-				  you can access many of it's Awesome features.	</h3>
+				<h3>Hello Admin here you can login your account<br>
+				  you can access many of it's awesome god features of khana and you can make them new too.	</h3>
 		</div>
 	</div>
 	 <div class="container w960">
       <div class="row">
 		<div class="done">
 		</div>
-       <form method="post" action="Register">
-       <center>   <input name="name" type="text" class="a" required="required" placeholder="Username *"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
+       <form method="post" action="Admin">
+       <center><input type="text" name="user"  class="a" required="required" placeholder="Username*"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
         <br><br>
-		<input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 />
+          <input type="password" name="pass" class="c" placeholder="Password*" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
           <br><br>
-          <input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+          <input type="password" name="id" class="c" placeholder="Key*" title="Key will be unique from password an made by different combination." required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
           <br><br>
-          <input type="submit" class="button2" value="Register">
-          <input type="button" class="button2" value="Admin Login" onclick="location='AdminLog.html';"></center>
-           </center>
+          <input type="submit" class="button2" value="Sign-in">
         </form>
       </div>
     </div>
 	</section>
-
 	
 
 	

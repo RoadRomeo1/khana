@@ -60,13 +60,24 @@
     <servlet-name>changeESer</servlet-name>
     <url-pattern>/changeESer</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>contact</servlet-name>
     <servlet-class>contact</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>contact</servlet-name>
     <url-pattern>/contact</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>Admin</servlet-name>
+  <servlet-class>Admin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Admin</servlet-name>
+  <url-pattern>/Admin</url-pattern>
   </servlet-mapping>
   
 </web-app>
