@@ -3,30 +3,33 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Veg Dishes</title>
-<link rel="stylesheet" href="css/style3.css"> 
 <link rel="stylesheet" href="css/style5.css"> 
 <link rel="icon" href="images/veg1.png" type="image/x-icon"/>
+<link rel="stylesheet" href="css/style2.css" />
+<link rel="stylesheet" href="css\style3.css" />
+<link rel="stylesheet" href="css\theme.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
 
 <style type="text/css">
-.button2 {
-    background-color: transparent;
-    border-color:gray;
-    border-radius:5px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 50%;
+.button2{
+background-color: gray;
+border-radius: 5px;
+border-color:transparent;
+background-color: #333;
+font-size: 25px;
+cursor: pointer;
+height:50px;
+width:190px;
+font-style: color=white;
+position: center;
 }
-.button2:hover{
-background-color: green;
 
-}	
+.button2:hover {
+	background-color: #cc580c;
+}
 
 * {
   margin: 0;
@@ -34,13 +37,7 @@ background-color: green;
   box-sizing: border-box;
 }
 
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background-image:url("images/back.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .gallery {
   width: 640px;
@@ -91,37 +88,11 @@ h1 {
 </style>
 
 </head>
-<body>
-
-<header>
-<nav id='cssmenu'>
-<div class="logo"><a href="#">KHANA</a></div>
-<div id="head-mobile"></div>
-<div class="button"></div>
-<ul>
-<li ><a href='profileSer'>Dashboard</a></li>
-<li class='active'><a href='Dishes.html'>EXPLORE</a></li>
-<li><a href='#'>CONTRIBUTE</a></li>
-<li><a href='search.html'>SEARCH</a></li>
-<li><a href='#'>MORE</a>
-   <ul>
-      <li><a href='#'>CONTACT US</a> </li>
-      <li><a href='#'>EDIT PROFILE</a>
-         <ul>
-            <li><a href='change.html'>CHANGE PASSWORD</a></li>
-            <li><a href='changeE.html'>CHANGE EMAIL</a></li>
-         </ul>
-      </li>
-	  <li><a href="logoutSer">SIGN OUT</a></li>
-   </ul>
-</li>
-
-</ul>
-</nav>
-</header>
-
-
-<script src="F:\khana\WebContent\js\menubar.js"></script>
+<body  style="background-image:url('images/back.jpg'); background-repeat: no-repeat; background-size: cover;">
+ 
+ 
+ 
+ 
 
 <div class="gallery cf">
   <div>
@@ -157,8 +128,59 @@ h1 {
   </div>
   <h2><u><center>Jain Thali</u></h2>
   </div>
-  <center><button class="button2">More</button><br>
+  <center><button class="button2" onclick="location='Dishes.html';">Back</button>&nbsp&nbsp&nbsp&nbsp<button class="button2" onclick="location='https://www.bbcgoodfood.com/recipes/collection/quick-veggie';">More</button><br>
 </center>
+ 
+ 
+	<!--footer-->
+	<div>
+	<section class="footer" id="footer">
+	
+	<p class="text-center">
+	 &copy; Copyright <br>
+	 Designed & Developed by Himanshu Vyas
+	</p>
+	</section>
+	</div><!--wrapper end-->
+	
+	
+<!--Javascripts-->
+<script src="js/jquery.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/menustick.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/easing.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/masonry.js"></script>
+<script src="js/imgloaded.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/colorfinder.js"></script>
+<script src="js/gridscroll.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+	$('.navbar-wrapper').stickUp({
+		parts: {
+		  0: 'banner',
+		  1: 'aboutus',
+		  2: 'specialties',
+		  3: 'gallery',
+		  4: 'feedback',
+		  5: 'contact'
+		},
+		itemClass: 'menuItem',
+		itemHover: 'active',
+		topMargin: 'auto'
+		});
+	});
+});
+</script>
   
 </body>
 </html>

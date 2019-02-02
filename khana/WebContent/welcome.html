@@ -13,6 +13,26 @@
 
 <style type="text/css">
 
+input#eye{
+position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#reg_password.form-control.input-lg {
+  font-size: 1.50em;
+  font-weight: 300;
+  margin-top: 18px;
+  padding: 10px 8px;
+  width:400px;
+  height:40px;
+  position: center;
+
+}
+.parent{position:absolute;}
+
+
+
 .a{
   font-size: 1.50em;
   font-weight: 300;
@@ -29,16 +49,6 @@
   padding: 10px 8px;
   width: 850px;
   height: 200px;
-}
-
-.c{
-  font-size: 1.50em;
-  font-weight: 300;
-  margin-top: 18px;
-  padding: 10px 8px;
-  width:400px;
-  height:40px;
-  position: center;
 }
 
 
@@ -93,7 +103,7 @@ font-style: color=white;
 											<li class="menuItem"><a href="#specialties">Themes</a></li>
 											<li class="menuItem"><a href="#gallery">Food Gallery</a></li>
 											<li class="menuItem"><a href="#feedback">Portfolio</a></li>
-											<li class="menuItem"><a href="#login">Sign in</a></li>
+											<li class="menuItem"><a href="#signin">Sign in</a></li>
 	                                        <li class="menuItem"><a href="#aboutus">About Us</a></li>
 					                        <li class="menuItem"><a href="#contact">Contact Us</a></li>
 	                                  </ul>
@@ -316,7 +326,7 @@ font-style: color=white;
 
 
 
-	<section class="contact">
+	<section class="contact" id="signin">
 	<div class="container">
 		<div class="heading">
 				<img class="dividerline" src="img/sep.png" alt="">
@@ -331,18 +341,25 @@ font-style: color=white;
 		<div class="done">
 		</div>
        <form method="post" action="Logged">
-       <center><input type="text" name="user"  class="a" required="required" placeholder="Username*"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
-        <br><br>
-          <input type="password" name="pass" class="c" placeholder="Password*" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
-          <br><br>
-          <input type="submit" class="button2" value="Sign-in">&nbsp&nbsp&nbsp<input type="button" class="button2" value="Register" onclick="location='Register.html';"></center>
+       <center>
+       <table>
+       <tr>
+       <td><input type="text" name="user"  class="a" required="required" placeholder="Username*"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$"></td>
+        </tr><tr>
+        <td><div class="col-md-12 parent" style="margin: 7px;"><input type="password"  id="reg_password" name="pass" class="form-control input-lg" ng-model="register_password" placeholder="Password*" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/><input type="checkbox" id="eye"  style="width: 20px; height: 20px;"  onclick="if(reg_password.type=='text')reg_password.type='password'; else reg_password.type='text';" title="Show or Hide password." /></div></td>
+                </tr></table></center> 
+        <br><br>  <br><br>          
+        <center><input type="submit" class="button2" value="Sign-in"></center>
+         
+         <br>
+         <center><font color="#cc580c"><a href="Register.html"><u>Register</u></a></font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="#cc580c"><a href="#"><u>Forgot Password</u></a></font></center>
         </form>
       </div>
     </div>
 	</section>
 
 	
-	<section>
+	<section id="contact">
 	<div class="container" class="contact">
 		<div class="heading">
 				<img class="dividerline" src="img/sep.png" alt="">
@@ -412,6 +429,16 @@ $(document).ready( function() {
 		});
 	});
 });
+
+
+function myFunction() {
+	  var x = document.getElementById("myInput");
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+	}
 </script>
 </body>
 </html>

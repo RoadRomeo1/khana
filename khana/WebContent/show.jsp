@@ -79,11 +79,12 @@ font-style: color=white;
 						<div class="navbar navbar-inverse navbar-static-top">
 							<div class="container">
 								<div class="navArea">
-									<div class="navbar-collapse collapse">
+										<div class="navbar-collapse collapse">
 										<ul class="nav navbar-nav">
 											<li class="menuItem active"><a href="AdminProfile.html">Home</a></li>
 											<li class="menuItem"><a href="show.jsp">Show members</a></li>
-					                        <li class="menuItem"><a href="logoutSer">Logout</a></li>
+											<li class="menuItem"><a href="search.html">Search</a></li>
+					                        <li class="menuItem" style="float:right;"><a href="logoutSer" >Logout</a></li>
 					                    </ul>
 									</div>
 								</div>

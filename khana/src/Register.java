@@ -54,11 +54,14 @@ public class Register extends HttpServlet {
     	rs=st.executeQuery(sql1);
     	
     	while(rs.next()) {
-    		if(rs.getString("name").equals(name)&&rs.getString("email").equals(email)&&rs.getString("password").equals(password)) {
-    			System.out.println("User Already Exists");
+    		if(rs.getString("email").equals(email)) {
+    		     System.out.println("User Already Exists");
+    		     System.out.println(name);
+    		     System.out.println(email);
+    		     System.out.println(password);
     		     pw.println("<script type=\"text/javascript\">");
-    			 pw.println("alert('You are already exist may be you want to Sign in');");
-    			 pw.println("location='welcome.html';");
+    			 pw.println("alert('User Already Exists(Tip: try with another email id)');");
+    			 pw.println("location='Register.html';");
     	 		 pw.println("</script>");
     	 		 count++;
     	         break;		 

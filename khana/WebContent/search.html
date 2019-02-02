@@ -1,53 +1,120 @@
 <!DOCTYPE html>
-	<html>
+<html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Search</title>
-<link rel="icon" href="images/search_icon.png" type="image/x-icon"/>
-<link rel="stylesheet" href="css/style1.css" />
-<link rel="stylesheet" href="css/style3.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images\search_icon.png" type="image/x-icon"/>
+<link rel="stylesheet" href="css\style3.css" />
+<link rel="stylesheet" href="css\theme.css">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 <style type="text/css">
 body {
 	background-image:url("images/search.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	}
-
+	
+}
 </style>
 </head>
+
+
 <body>
+
 <header>
-<nav id='cssmenu'>
-<div class="logo"><a href="#">KHANA</a></div>
-<div id="head-mobile"></div>
-<div class="button"></div>
-<ul>
-<li><a href='profileSer'>HOME</a></li>
-<li><a href='Dishes.html'>EXPLORE</a></li>
-<li><a href='#'>CONTRIBUTE</a></li>
-<li><a href='#' class="active">SEARCH</a></li>
-<li><a href='#'>MORE</a>
-  <ul>
-      <li><a href='#'>CONTACT US</a> </li>
-      <li><a href='#'>EDIT PROFILE</a>
-         <ul>
-            <li><a href='#'>CHANGE PASSWORD</a></li>
-            <li><a href='changeE.html'>CHANGE EMAIL</a></li>
-         </ul>
-      </li>
-	  <li><a href="logoutSer">SIGN OUT</a></li>
-   </ul>
-</li>
-</ul><li><gcse:search background-color:transparent;></gcse:search></li>
-</nav>
-</header>
+	<div class="banner row" id="banner">		
+			<div class="parallax text-center" style="background-image: url(http://wowthemes.net/demo/leroy/img/dummy1.jpg);">
+				<div class="parallax-pattern-overlay">
+					<div class="container text-center" style="height:600px;padding-top:170px;">
+					<h2 class="intro wow zoomIn" wow-data-delay="0.4s" wow-data-duration="0.9s">Khana</h2>
+					</div>
+				</div>
+			</div>
+		</div>	
+	
+	<div class="menu">
+			<div class="navbar-wrapper">
+				<div class="container">
+					<div class="navwrapper">
+						<div class="navbar navbar-inverse navbar-static-top">
+							<div class="container">
+								<div class="navArea">
+									<div class="navbar-collapse collapse">
+										<ul class="nav navbar-nav" >
+											<li class="menuItem active"><a href="AdminProfile.html">Home</a></li>
+											<li class="menuItem"><a href="show.jsp">Show members</a></li>
+					                        <li class="menuItem"><a href="#">Search</a></li>
+					                        <li class="menuItem" style="float:right;"><a href="logoutSer">Logout</a></li>
+					                    </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		</header>
+
+<gcse:search background-color:transparent;></gcse:search>
+	
 
 
-<script src="js\menubar.js"></script>
+
+	<!--footer-->
+	<div>
+	<section class="footer" id="footer">
+	
+	<p class="text-center">
+	 &copy; Copyright <br>
+	 Developed by Himanshu Vyas
+	</p>
+	</section>
+	</div><!--wrapper end-->
+	
+	
+<!--Javascripts-->
+<script src="js/jquery.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/menustick.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/easing.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/masonry.js"></script>
+<script src="js/imgloaded.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/colorfinder.js"></script>
+<script src="js/gridscroll.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/common.js"></script>
 
 <script type="text/javascript">
-  (function() {
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+	$('.navbar-wrapper').stickUp({
+		parts: {
+		  0: 'banner',
+		  1: 'aboutus',
+		  2: 'specialties',
+		  3: 'gallery',
+		  4: 'feedback',
+		  5: 'contact'
+		},
+		itemClass: 'menuItem',
+		itemHover: 'active',
+		topMargin: 'auto'
+		});
+	});
+});
+
+
+(function() {
     var cx = '013166321354038020852:8_nr1pssfxa';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
@@ -56,6 +123,7 @@ body {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+  
 </script>
 </body>
 </html>

@@ -63,9 +63,11 @@ public class Logged extends HttpServlet {
 			    HttpSession session=request.getSession();
 				session.setAttribute("name1",name1);
 	            System.out.println("password matched!");
-				request.getRequestDispatcher("profile.html").include(request, response);
-				pw.println("<h1>" + "Welcome " + name1 + "</h1>");
-			  
+	            pw.println("<script type=\"text/javascript\">");
+			    pw.println("alert('Welcome khana user');");
+			    pw.println("location='profile.html';");
+			    pw.println("</script>");
+	          
 			}
 			
 		    else if(name1==null) {

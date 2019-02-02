@@ -118,11 +118,17 @@ position: center;
 		<div class="done">
 		</div>
        <form method="post" action="Register">
-       <center>   <input name="name" type="text" class="a" required="required" placeholder="Username *"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$">
-        <br><br>
-		<input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 />
-          <br><br>
-          <input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+       <center><table>   
+       <tr>
+       <td><input name="name" type="text" class="a" required="required" placeholder="Username *"  title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^\w+\s\w+$"></td>
+        </tr>
+        <tr>
+        <td><input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 /></td>
+          </tr>
+          <tr>
+          <td><input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" id="myInput"/></td><td><font color="#cc580c"><a onClick="myFunction(); return false;" href="#">Show</a></font></td>
+          </tr>
+          </table>
           <br><br>
           <input type="submit" class="button2" value="Register">
           <input type="button" class="button2" value="Admin Login" onclick="location='AdminLog.html';"></center>
@@ -139,7 +145,7 @@ position: center;
 	<section class="footer" id="footer">
 	<p class="text-center">
 	 &copy; Copyright <br>
-	 Developed by Himanshu Vyas
+	 Designed & Developed by Himanshu Vyas
 	</p>
     </section>
 	</div><!--wrapper end-->
@@ -181,6 +187,17 @@ $(document).ready( function() {
 		});
 	});
 });
+
+
+function myFunction() {
+	  var x = document.getElementById("myInput");
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+	}
+
 </script>
 </body>
 </html>
