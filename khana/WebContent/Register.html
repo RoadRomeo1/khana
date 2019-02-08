@@ -126,12 +126,14 @@ position: center;
         <td><input type="email" name="email" placeholder="Email address*" class="a" title="Format: Xyz.com" required="required"	 /></td>
           </tr>
           <tr>
-          <td><input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" id="myInput"/></td><td><font color="#cc580c"><a onClick="myFunction(); return false;" href="#">Show</a></font></td>
+          <td><input type="password" name="password" class="c" placeholder="Password *" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" id="myInput"/></td><td><font color="#cc580c"><a onClick="myFunction(); return false;" href="#" title="show/hide password">Show</a></font></td>
           </tr>
           </table>
           <br><br>
-          <input type="submit" class="button2" value="Register">
-          <input type="button" class="button2" value="Admin Login" onclick="location='AdminLog.html';"></center>
+    <center> <input type="submit" class="button2" value="Register"></center> <br>
+           <font color="#cc580c"><a href="AdminLog.html" title="Login as admin">Admin</a></font>
+           &nbsp&nbsp&nbsp&nbsp
+           <font color="#cc580c"><a href="welcome.html" title="Login as member">member</a></font>
            </center>
         </form>
       </div>

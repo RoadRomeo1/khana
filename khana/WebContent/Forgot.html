@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Khana</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images\khana.png" type="image/x-icon"/>
+<meta charset="ISO-8859-1">
+<title>Change Password</title>
+<link rel="icon" href="images/changePass.png" type="image/x-icon"/>
+<link rel="stylesheet" href="css/style2.css" />
 <link rel="stylesheet" href="css\style3.css" />
 <link rel="stylesheet" href="css\theme.css">
-
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
@@ -20,21 +20,9 @@
   padding: 10px 8px;
   width:400px;
   height:40px;
-}
-
-.c{
-  font-size: 1.50em;
-  font-weight: 300;
-  margin-top: 18px;
-  padding: 10px 8px;
-  width:400px;
-  height:40px;
-  position: center;
-}
-
-
-
-.button2{
+  }
+  
+  .button2{
 background-color: gray;
 border-radius: 5px;
 border-color:black;
@@ -44,21 +32,17 @@ cursor: pointer;
 height:50px;
 width:190px;
 font-style: color=white;
-position: center;
+
 }
 
 .button2:hover {
 	background-color: #cc580c;
 }
-
+  
 
 </style>
-
 </head>
-
-
 <body>
-
 <header>
 
 	<div class="banner row" id="banner">		
@@ -98,48 +82,30 @@ position: center;
 		</div>	
 		</header>
 
+<form action="changeSer" method="post" onSubmit="return Fun(this);">
+<center>
+<table>
+<tr><td><input type="password" name="newpass" class="a" placeholder="New Password*"  id="new"  title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/></td><td><font color="#cc580c"><a onClick="myFunction(); return false;" href="#" title="show/hide password">Show</a></font></td></tr>
+<tr><td><input type="password" name="confirm" class="a" placeholder="Confirm Password*" id="con" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter"  required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/></td><td><font color="#cc580c"><a onClick="myFunction1(); return false;" href="#" title="show/hide password">Show</a></font></td></tr>
+<tr><td><input type="text" name="answer" class="a" placeholder="Security Answer" required="required" /></td></tr>
+</table>
+<br>
+</center>
+<center><input type="submit" value="Change"  title="Change password" class="button2"></center>
+<br>
+<center><font color="#cc580c"><a href="ForgotAns.html" title="Forgot Security Answer">Forgot Answer</a></font>
 
-	
 
-
-
-	<section class="contact" id="login">
-	<div class="container">
-		<div class="heading">
-				<img class="dividerline" src="img/sep.png" alt="">
-				<h2>Security Question</h2>
-				<img class="dividerline" src="img/sep.png" alt="">
-				<h3>Second step of your registration<br>
-				  you have to set a security question here for your account recovery purpose.</h3>
-		</div>
-	</div>
-	 <div class="container w960">
-      <div class="row">
-		<div class="done">
-		</div>
-       <form method="post" action="RegSec">
-       <center>   <input type="text" class="a"  name="ques"  placeholder="Security Question*" title="Maximum 100 letters" required="required" maxlength="100">
-        <br><br>
-		<input type="text" class="a" name="ans" placeholder="Your Answer*" title="Maximum 50 letters"   required="required"  maxlength="30">
-          <br><br>
-         &nbsp&nbsp&nbsp <input type="password" name="pass" class="c" placeholder="Password*" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" id="myInput" /><font color="#cc580c"><a onClick="myFunction(); return false;" href="#" title="show/hide password">Show</a></font>
-          <br><br>
-          <input type="submit" class="button2" value="Set"></center>
-        </form>
-      </div>
-    </div>
-	</section>
-
-	
-
-	
+</form>
 	<!--footer-->
+	<div>
 	<section class="footer" id="footer">
+	
 	<p class="text-center">
 	 &copy; Copyright <br>
-	 Developed by Himanshu Vyas
+	 Designed & Developed by Himanshu Vyas
 	</p>
-    </section>
+	</section>
 	</div><!--wrapper end-->
 	
 	
@@ -181,10 +147,33 @@ $(document).ready( function() {
 });
 
 
+function Fun(theForm) {
+	
+
+
+if(theForm.newpass.value!=theForm.confirm.value){
+	alert("Passwords doesn't match");
+    return false;
+    }
+    
+else{
+	return true;
+}
+}
+
 
 
 function myFunction() {
-	  var x = document.getElementById("myInput");
+	  var x = document.getElementById("new");
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } else {
+	    x.type = "password";
+	  }
+	}
+	
+function myFunction1() {
+	  var x = document.getElementById("con");
 	  if (x.type === "password") {
 	    x.type = "text";
 	  } else {
@@ -192,6 +181,8 @@ function myFunction() {
 	  }
 	}
 
+
 </script>
+
 </body>
 </html>

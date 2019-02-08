@@ -64,7 +64,7 @@ public class changeSer extends HttpServlet {
 	    		     System.out.println("Data updated...at changeSer");
 	    			 pw.println("<script type=\"text/javascript\">");
 	    			 pw.println("alert('You are password has been changed successfully...');");
-	    			 pw.println("location='profile.html';");
+	    			 pw.println("location='welcome.html';");
 	    	 		 pw.println("</script>");
                      break;
 	    		}

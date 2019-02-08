@@ -27,7 +27,7 @@ public class Register extends HttpServlet {
     	
     	Connection con=null;
     	Statement st=null;
-		ResultSet rs=null;
+	ResultSet rs=null;
     	String user="root";
     	String pass="root";
     	String url="jdbc:mysql://localhost:3306/khanna";

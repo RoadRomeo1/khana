@@ -4,6 +4,7 @@
   <welcome-file-list>
     <welcome-file>welcome.html</welcome-file>
   </welcome-file-list>
+
   <servlet>
     <servlet-name>Logged</servlet-name>
     <servlet-class>Logged</servlet-class>
@@ -12,6 +13,7 @@
     <servlet-name>Logged</servlet-name>
     <url-pattern>/Logged</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>Register</servlet-name>
     <servlet-class>Register</servlet-class>
@@ -20,6 +22,7 @@
     <servlet-name>Register</servlet-name>
     <url-pattern>/Register</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>profileSer</servlet-name>
     <servlet-class>profileSer</servlet-class>
@@ -28,6 +31,7 @@
     <servlet-name>profileSer</servlet-name>
     <url-pattern>/profileSer</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>logoutSer</servlet-name>
     <servlet-class>logoutSer</servlet-class>
@@ -36,6 +40,7 @@
     <servlet-name>logoutSer</servlet-name>
     <url-pattern>/logoutSer</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>RegSec</servlet-name>
     <servlet-class>RegSec</servlet-class>
@@ -44,6 +49,7 @@
     <servlet-name>RegSec</servlet-name>
     <url-pattern>/RegSec</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>changeSer</servlet-name>
     <servlet-class>changeSer</servlet-class>
@@ -52,6 +58,7 @@
     <servlet-name>changeSer</servlet-name>
     <url-pattern>/changeSer</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>changeESer</servlet-name>
     <servlet-class>changeESer</servlet-class>
@@ -60,6 +67,7 @@
     <servlet-name>changeESer</servlet-name>
     <url-pattern>/changeESer</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>contact</servlet-name>
     <servlet-class>contact</servlet-class>
@@ -68,16 +76,22 @@
     <servlet-name>contact</servlet-name>
     <url-pattern>/contact</url-pattern>
   </servlet-mapping>
-  
-  
+
   <servlet>
-  <servlet-name>Admin</servlet-name>
-  <servlet-class>Admin</servlet-class>
+    <servlet-name>Admin</servlet-name>
+    <servlet-class>Admin</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  <servlet-name>Admin</servlet-name>
-  <url-pattern>/Admin</url-pattern>
+    <servlet-name>Admin</servlet-name>
+    <url-pattern>/Admin</url-pattern>
   </servlet-mapping>
-  
+
+<servlet>
+<servlet-name>changeAns</servlet-name>
+<servlet-class>changeAns</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>changeAns</servlet-name>
+<url-pattern>/changeAns</url-pattern>
+</servlet-mapping>
 </web-app>
