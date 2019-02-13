@@ -61,7 +61,7 @@ public class changeAns extends HttpServlet {
 				  st.executeUpdate(sql1);
 				  System.out.println("Data updated");
 				  pw.println("<script type=\"text/javascript\">");
-				  pw.println("alert('Your Security Answer has been changed Successfully');");
+				  pw.println("alert('Your password has been changed Successfully');");
 				  pw.println("location='welcome.html';");
 			 	  pw.println("</script>");
 			 	  break;

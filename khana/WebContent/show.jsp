@@ -197,7 +197,6 @@ font-style: color=white;
 
 <br><br>
 
-<center><input type="button"  class="button2"  value="Remove user" onclick="location='removeUser.jsp';">&nbsp&nbsp&nbsp&nbsp<input type="button" class="button2" value="Add new admin" onclick="location='addAdmin.html';"></center>
 	
 
 

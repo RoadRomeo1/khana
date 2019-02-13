@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +27,7 @@ public class changeSer extends HttpServlet {
     String url="jdbc:mysql://localhost:3306/khanna";
     String answer=request.getParameter("answer");
     String newpass=request.getParameter("newpass");
+    String secid=request.getParameter("secid");
     String confirm=request.getParameter("confirm");
     String sql="select secAnswer from data where secAnswer='"+answer+"'";
     String sql1="update data set password='"+confirm+"' where secAnswer='"+answer+"' ";
@@ -44,35 +46,44 @@ public class changeSer extends HttpServlet {
 		
 		st=con.createStatement();
 		
-		rs=st.executeQuery(sql);
-		
-		System.out.println("data coming...at changeSer");
-		
-			if(rs==null) {
+		 System.out.println("data coming...at changeSer");
+		    
+		 
+		 
+	
+			 rs=st.executeQuery(sql);
+			 
+			
+			   if(rs==null) {
 			     System.out.println("Wrong answer");
     			 pw.println("<script type=\"text/javascript\">");
-    			 pw.println("alert('Please Enter Right Answer');");
+    			 pw.println("alert('Please Enter Right Answer.');");
     			 pw.println("location='change.html';");
     	 		 pw.println("</script>");
             
 			}
-			else {
+			 
+			else {System.out.println("we successfully crossed if section");
+	    
 						while(rs.next()) {
-                  			
+                  			System.out.println("we are in while loop");
 	    		if(rs.getString("secAnswer").equals(answer)) {
 	    		     st.executeUpdate(sql1);
 	    		     System.out.println("Data updated...at changeSer");
 	    			 pw.println("<script type=\"text/javascript\">");
-	    			 pw.println("alert('You are password has been changed successfully...');");
+	    			 pw.println("alert('Your password has been changed successfully...');");
 	    			 pw.println("location='welcome.html';");
 	    	 		 pw.println("</script>");
                      break;
 	    		}
 	    		
 	    	}
+						System.out.println("end");
 			}
-		
-		
+			   
+		    
+	
+	       
 	
 		
 		con.close();
